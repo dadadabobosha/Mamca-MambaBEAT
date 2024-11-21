@@ -62,8 +62,7 @@ length = "1k"  # CHANGE
 # static variables
 current_file_path = os.path.abspath(__file__)
 current_folder = os.path.dirname(current_file_path)
-# DATA_PATH = os.path.abspath(os.path.join(current_folder, "..", "..", "1k"))  # CHANGE
-DATA_PATH = os.path.abspath(os.path.join(current_folder, "..", "..","..","..", "dataset/Icential11k_dataset/1k"))
+DATA_PATH = os.path.abspath(os.path.join(current_folder, "..", "..", "1k"))  # CHANGE
 # DATA_PATH = os.path.abspath(os.path.join(current_folder, "..", "..","..","..", "dataset/Icential11k_dataset/1k"))  # test data path in local
 # DATA_PATH: str = f"/work/scratch/js54mumy/icentia11k/icentia11k-single-lead-continuous-raw-electrocardiogram-dataset-1.0/seg_npy4/{length}"
 N_CLASSES: int = 2

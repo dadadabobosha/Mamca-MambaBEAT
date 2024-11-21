@@ -61,7 +61,7 @@ print(f"device:{device}")
 # set all seeds and set number of threads
 set_seed(32)
 torch.set_num_threads(8)
-length = '1k'
+length = '10k'
 # static variables
 current_file_path = os.path.abspath(__file__)
 current_folder = os.path.dirname(current_file_path)

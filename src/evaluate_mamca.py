@@ -13,7 +13,7 @@ NUM_CLASSES: int = 2
 
 # set device
 device = torch.device("cuda") if torch.cuda.is_available() else torch.device("cpu")
-set_seed(32)
+set_seed(42)
 
 def plot_confusion_matrix(y_true, y_pred, class_names, accuracy, f1, dataset_name):
     """
@@ -107,11 +107,11 @@ if __name__ == "__main__":
     length = '1k'
     name = 'Mamca'
     # model_path = r"C:\wenjian\MasterArbeit\Code\repo\My_Mamba_ECG_Classification\Lichtenberg\results\final\Mamba\1k\best_model_20241021_174157_binary_MambaBEAT_1k_0.7987.pth"
-    model_path = rf"C:\wenjian\MasterArbeit\Code\repo\test_repo\models\best_model_20241116_225227_binary_MAMCA_1k_0.7217.pth"
+    # model_path = rf"C:\wenjian\MasterArbeit\Code\repo\test_repo\models\best_model_20241116_225227_binary_MAMCA_1k_0.7217.pth"
 
     # TRAINING_DATA_PATH: str = rf"C:\wenjian\MasterArbeit\Code\dataset\Icential11k_dataset\1k"
     current_file_path = os.path.abspath(__file__)
     current_folder = os.path.dirname(current_file_path)
     TRAINING_DATA_PATH = os.path.abspath(os.path.join(current_folder, "..", "..", "..", "dataset/Icential11k_dataset/1k"))
-    model_path = os.path.abspath(os.path.join(current_folder, "..", "models", "best_model_20241116_225227_binary_MAMCA_1k_0.7217.pth"))
+    model_path = os.path.abspath(os.path.join(current_folder, "..", "models", "best_model_20241121_214402_binary_MAMCA_1k_0.8793.pth"))
     evaluate_model_on_dataset(model_path, TRAINING_DATA_PATH, f"{name}_{length}", BinaryAccuracy())
